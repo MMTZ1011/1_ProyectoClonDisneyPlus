@@ -1,0 +1,318 @@
+body {
+  margin: 0; /* Elimina el margen por defecto del cuerpo del documento */
+  height: 100%; /* Asegura que el cuerpo toma al menos el alto completo de la ventana del navegador */
+  background-image: linear-gradient(to bottom, #070e18, #231f30); /* Aplica un gradiente vertical */
+  background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+  background-repeat: no-repeat; /* Evita la repetición del fondo */
+  background-size: cover; /* Asegura que el fondo cubra toda la página */
+}
+
+
+#disney-icon{
+    width: 174px;
+    height: 50px;
+    padding: 5px;
+  }
+
+
+.navbar-disney {
+    background-image: linear-gradient(to bottom, #0c0425,  #1b1b33); /* Cambia los colores según tus preferencias */
+    color: white; /* Cambia el color del texto si es necesario */
+    padding: 10px 30px; /* Añade un poco de padding para un mejor diseño */
+    display: flex; /* Establece la disposición de flexbox para la barra de navegación */
+    align-items: center; /* Alinea verticalmente todos los elementos al centro */
+    font-family: Arial, sans-serif; /* Establece una fuente predeterminada para toda la barra */
+    position: fixed; /* Fija la barra de navegación en la parte superior de la página */
+    z-index: 1000; /* Asegura que la barra de navegación se mantenga por encima de otros contenidos */
+    width: 100%; /* Asegura que la barra de navegación ocupe el ancho completo de la ventana */
+    top: 0; /* Alinea la barra de navegación en la parte superior */
+    left: 0; /* Alinea la barra de navegación a la izquierda */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.nav-items {
+  display: flex; /* Establece el diseño en línea horizontal */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  gap: 20px; /* Añade espacio entre los elementos */
+  font-size: 16px;
+  margin-right: 200px;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: white; /* Color del texto para los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  margin-right: 15px; /* Espacio entre los enlaces */
+  font-size: 16px; /* Ajusta el tamaño de la fuente para los enlaces */
+  font-weight: bold; /* Hace que el texto de los enlaces sea más grueso */
+  display: flex; /* Usa flexbox para alinear el icono y el texto */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 5px;
+  position: relative; /* Posiciona relativo para el pseudo-elemento */
+  padding-bottom: 5px; /* Espacio en el fondo para el subrayado */
+}
+
+
+.nav-link::after {
+  content: ''; /* Necesario para que se muestre el pseudo-elemento */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%; /* Comienza sin ancho */
+  height: 2px; /* Altura del subrayado */
+  background-color: white; /* Color del subrayado */
+  transition: width 0.4s ease; /* Transición suave para la animación del ancho */
+}
+
+.nav-link:hover {
+  color: #ffed9b;
+}
+.nav-link:hover::after {
+  width: 100%; /* Extiende el ancho al 100% cuando el mouse está sobre el enlace */
+}
+
+
+.nav-dropdown {
+  position: relative; /* Para el posicionamiento del contenido desplegable */
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Añade esto para empujar el bloque hacia la derecha */
+}
+
+.username {
+  color: white;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  object-fit: cover; /* Asegura que la imagen se adapte al espacio sin distorsionarse */
+}
+
+
+
+
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ajusta esto según el número de columnas deseadas */
+  gap: 20px;
+  padding: 20px;
+}
+
+.buttoncontenido {
+  border-radius: 20px; /* Borde redondeado */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+  background-image: linear-gradient(to bottom, #4d4d4d, #1d1d1d); /* Fondo gradiente */
+  border: none; /* Elimina el borde por defecto */
+  padding: 10px; /* Espacio dentro del botón */
+  cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
+  transition: all 0.3s ease; /* Transición suave para efectos */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75); /* Sombra más intensa al hacer hover */
+}
+
+.buttoncontenido img {
+  width: 100%; /* Hace que la imagen llene el botón */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+.buttoncontenido:hover {
+  border: 5px solid white; /* Contorno blanco al hacer hover */
+  background-image: linear-gradient(to right, #009FFF, #ec2F4B); /* Cambia el fondo gradiente */
+}
+
+.buttoncontenido:hover img {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+
+
+
+
+/*  Carrusel contenido*/
+.container2 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.title2 {
+  text-align: left;
+  color: #c9c9c9;
+  font-family: Arial, sans-serif; /* Establece una fuente predeterminada para toda la barra */
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  width: calc(450px * 5); /* Adjust based on number of items and item width */
+  margin: 20px 10px;
+}
+
+
+.buttonCarru {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones suaves para efectos */
+}
+.buttonCarru img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: border 0.3s ease; /* Transición suave para el borde */
+}
+.buttonCarru:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra más intensa al hacer hover */
+  transform: scale(1.05); /* Opcional: un leve aumento de tamaño */
+}
+.buttonCarru:hover img {
+  border: 6px solid white; /* Borde blanco al hacer hover */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+}
+.carousel-control.left {
+  left: 10px;
+}
+
+.carousel-control.right {
+  right: 10px;
+}
+
+
+
+
+
+/* EL DE SLIDE SHOW CONTAITNER */
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 100px; /* Asegura que haya espacio suficiente para ver todo el contenido */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(238, 238, 238, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
